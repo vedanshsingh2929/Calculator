@@ -1,4 +1,4 @@
-let string = "";
+let string="";
 // function display(value)
 // {
 //     console.log("Value1",value);
@@ -6,12 +6,10 @@ let string = "";
 //     console.log(document.getElementsByClassName("button").value);
 // }
 let buttons = document.querySelectorAll('.button');
-// console.log("Buttons",buttons);
 Array.from(buttons).forEach((button)=>{
-    button.addEventListener('click', (e)=>{
-       console.log(e.target);
-       string = string + e.target.innerHTML;
-       document.querySelector('input').value = string;
+    button.addEventListener('click',(e)=>{
+       string=string+e.target.innerHTML;
+       document.querySelector('input').value=string;
     })
 })
 
@@ -22,5 +20,14 @@ function ac() {
     document.querySelector('input').value = string;
 }
 function equal() {
-    
+    let d="",h="";
+    let len=string.length;
+    len=len/3;
+    for(let i=0;i<len;i++)
+    {
+         d=string.charAt(i);
+         h=h+d;
+        
+    }
+    console.log(h);
 }
